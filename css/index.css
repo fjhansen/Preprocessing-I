@@ -134,41 +134,55 @@ html,
 body {
   height: 100%;
 }
-.purpletext {
-  color: violet;
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Barlow Condensed Regular'), local('BarlowCondensed-Regular'), url(https://fonts.gstatic.com/s/barlowcondensed/v4/HTx3L3I-JCGChYJ8VI-L6OO_au7B6xHT3w.ttf) format('truetype');
+}
+.orangetext {
+  color: darkorange;
   font-size: 2rem;
-  opacity: 0.5;
 }
-section {
-  background-color: lightblue;
-}
-a {
-  color: green;
+.blacktext {
+  color: black;
+  font-size: 2rem;
 }
 .container {
-  width: 600px;
+  width: 1600px;
   margin: 0 auto;
-  background: purple;
+  background: black;
+  font-family: 'Barlow Condensed', sans-serif;
 }
 @media (max-width: 800px) {
   .container {
-    background-color: red;
-  }
-  .container nav {
-    background-color: lightblue;
+    width: 100%;
   }
 }
-.container header {
-  width: 100%;
-}
-.container header nav {
+header {
   width: 100%;
   display: flex;
-  justify-content: space-between;
 }
-.container header nav a {
-  text-decoration: none;
-  color: violet;
+header h1 {
+  color: darkorange;
   font-size: 2rem;
-  opacity: 0.5;
+}
+@media (max-width: 800px) {
+  header h1 {
+    color: black;
+    font-size: 2rem;
+    background: darkorange;
+  }
+}
+header nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header nav a {
+  text-decoration: none;
+  color: darkorange;
+  font-size: 2rem;
 }

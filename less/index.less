@@ -59,47 +59,75 @@ html, body {
     height: 100%;
 }
 // mixins
-
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap');
 @backgroundBlue: lightblue;
 @color: green;
-@backgroundPurple: violet;
+@colorOrange: darkorange;
+@black: black;
 
-.purpletext {
-	color: @backgroundPurple;
+@title-font: 'Barlow Condensed', sans-serif;
+.orangetext {
+	color: @colorOrange;
 	font-size: 2rem;
-	opacity: .5;
+
 }
 
-section {background-color: @backgroundBlue;}
+.blacktext {
+	color:@black;
+	font-size: 2rem;
+}
 
-a {color: @color}
+
+
+
 
 .container {
-	width: 600px;
+	width: 1600px;
 	margin: 0 auto;
-	background: purple;
+	background: black;
+	font-family: @title-font;
+	
 
 	@media (max-width:800px) {
-		background-color: red;
-		nav {
-			background-color: @backgroundBlue;
+		width: 100%;
+		
 		}
 	}
 
 	header {
 		width: 100%;
+		display: flex;
+
+		h1 {
+			.orangetext();
+
+			@media (max-width:800px) {
+				
+				.blacktext();
+				background: @colorOrange;
+				
+			}
+		}
+		
 
 		nav{
 			width: 100%;
 			display: flex;
-			justify-content: space-between;
+			justify-content: space-evenly;
+			align-items: center;
+			
+			
+			
 
 			a {
 				text-decoration: none;
-				.purpletext()
+				.orangetext()
 			}
+			
+
+			
 
 		}
 	}
-}
+
 
