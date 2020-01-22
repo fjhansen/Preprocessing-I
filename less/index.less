@@ -31,6 +31,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	
+	
 }
 ol, ul {
 	list-style: none;
@@ -55,5 +57,49 @@ table {
 
 html, body {
     height: 100%;
+}
+// mixins
+
+@backgroundBlue: lightblue;
+@color: green;
+@backgroundPurple: violet;
+
+.purpletext {
+	color: @backgroundPurple;
+	font-size: 2rem;
+	opacity: .5;
+}
+
+section {background-color: @backgroundBlue;}
+
+a {color: @color}
+
+.container {
+	width: 600px;
+	margin: 0 auto;
+	background: purple;
+
+	@media (max-width:800px) {
+		background-color: red;
+		nav {
+			background-color: @backgroundBlue;
+		}
+	}
+
+	header {
+		width: 100%;
+
+		nav{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+
+			a {
+				text-decoration: none;
+				.purpletext()
+			}
+
+		}
+	}
 }
 
