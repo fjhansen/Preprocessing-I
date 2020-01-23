@@ -52,7 +52,8 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	
 }
 
 html, body {
@@ -72,20 +73,50 @@ html, body {
 
 }
 
+.orangetextsmall {
+	color: @colorOrange;
+	font-size: 1.5rem;
+
+}
+
 .blacktext {
 	color:@black;
 	font-size: 2rem;
 }
 
+.blacktextlarge {
+	color:@black;
+	font-size: 4rem;
+}
 
+.blacktextmedium {
+	color:@black;
+	font-size: 3rem;
+}
 
 
 
 .container {
 	max-width: 1100px;
 	margin: 0 auto;
-	background: black;
-	border: solid red 2px;
+	
+
+	font-family: @title-font;
+	
+	@media (max-width:800px) {
+		width: 100%;
+		
+		}
+	}
+
+body {
+	background-color: black;
+}
+.page {
+	max-width: 1100px;
+	margin: 0 auto;
+	background: whitesmoke;
+	
 	font-family: @title-font;
 	
 	
@@ -97,15 +128,62 @@ html, body {
 		}
 	}
 
+.header-title {
+	display: flex;
+
+	h1 {
+		width: 50%;
+		.blacktextmedium
+	}
+	h2 {
+		width: 100%;
+		background: darkorange;
+		.blacktextmedium
+	}
+}
+	.topnav {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		
+
+		width: 80%;
+
+		a {
+			
+		}
+		
+	}
+
+	.middlenav {
+
+		display: flex;
+
+		h1 {
+			.blacktextmedium();
+			
+		}
+	}
+
+	.bottomnav {
+		background-color: orangered
+	}
+
+
+	.image {
+		border: 3px solid orangered;
+	}
 	header {
 		width: 100%;
 		display: flex;
 		flex-wrap: nowrap;
 		flex-direction: column;
 		
+		
 
 		h1 {
-			.orangetext();
+			.blacktextlarge();
+			background-color: orangered;
 
 			@media (max-width:800px) {
 				
@@ -115,23 +193,54 @@ html, body {
 			}
 		}
 		
-
+          
 		nav{
 			width: 100%;
 			display: flex;
 			justify-content: space-evenly;
-			align-items: center;
+			align-items: flex-end;
+			background-color: rgb(17, 17, 17);
 			
+			div {
+			display: flex;
 			
 			
 
 			a {
 				text-decoration: none;
-				.orangetext()
+				.orangetext();
+
+				
+				
+				
+			}
+
+			h1 {
+			  
 			}
 
 			
+			}
+
+			div {
+				display: flex;
+				flex-direction: column;
+             h1 {
+				 text-align: center;
+			 }
+
+			 div { display: flex;
+				flex-direction: row;
+			a {
+				text-decoration: none;
+				.orangetext();
 			
+				
+					}
+                   }
+				}
+				
+			}
 
 			
 
@@ -141,13 +250,13 @@ html, body {
 			display: flex;
 			flex-wrap: wrap;
 			
-			background-color: red
+			
 		}
-	}
+
 
 	section {
 		display: flex;
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
 		flex-direction: row;
 	
 	}
@@ -157,8 +266,8 @@ html, body {
 		flex-wrap: wrap;
 		flex-direction: column;
 		background: darkgrey;
-		border: 3px darkorange solid;
-		margin: auto;
+
+		
 
 		.main-image {
 			
@@ -175,15 +284,94 @@ flex-direction: column;
 
 	.bottom-content {
 flex-direction: column;
-width: 10%;
+width: 30%;
+
+flex-wrap: wrap;
+            h2 {
+				text-align: center;
+				.orangetextsmall()
+
+			}
+			div {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: space-around;
+				max-height: 500px;
+				
+
+			}
+
+
 	}
 
 	.top-content {
 		flex-direction: row-reverse;
+		align-items: flex-start;
+		align-content: space-between;
+		flex-wrap: wrap;
+		
+		
+		
 		
 	}
 
-	.skills-container {
+	.skills {
+	display: flex;
+	width:100%;
+	flex-direction: row;
+	height: 50vh;
 		
 	}
 
+
+	.contact.container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		h2 {
+			.orangetextsmall();
+			text-align: center;
+		}
+
+		div {
+			align-self: center;
+			margin: 1%;
+
+			
+		}
+
+		address {
+			align-self: center;
+			line-height: 1.5;
+		}
+	}
+
+	.Copyright {
+		p {
+			.orangetextsmall;
+			text-align: center;
+		}
+	}
+
+
+	.hero {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: darkorange;
+		
+		h2 {
+			.blacktext();
+			text-align: center;
+			
+		}
+
+		p {
+			width: 50%;
+			text-align: center;
+			color: whitesmoke;
+		}
+	}
