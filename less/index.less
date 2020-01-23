@@ -124,6 +124,8 @@ body {
 
 	@media (max-width:800px) {
 		width: 100%;
+		max-width: 800px;
+		margin: 0 auto;
 		
 		}
 	}
@@ -267,11 +269,24 @@ body {
 		flex-direction: column;
 		background: darkgrey;
 
+		@media (max-width:800px) {
+			max-width: 80%;
+		}
+
+		img {
+			@media (max-width:800px) {
+				
+			}
+		}
+
+
+
 		
 
-		.main-image {
-			
-		}
+		
+
+
+	
 		
 
 	}
@@ -280,6 +295,17 @@ body {
 color: red;
 display: flex;
 flex-direction: column;
+
+section {
+	
+	@media (max-width:800px) {
+		max-width: 100%;
+		margin: auto;
+		display: flex;
+		justify-content: center;
+		
+	}
+}
 	}
 
 	.bottom-content {
